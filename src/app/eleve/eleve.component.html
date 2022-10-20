@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Prénom</td>
+                    <td>Nom</td>
+                    <td>Date de naissance</td>
+                    <td>Tutaire</td>
+                    <td>Voir plus</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let eleve of eleves">
+                    <td>{{eleve.firstName}}</td>
+                    <td>{{eleve.lastName}}</td>
+                    <td>{{eleve.birthDayAt|date: 'dd/MM/yyyy'}}</td>
+                    <td>{{eleve.tutor}} ({{eleve.tutorPhone}})</td>
+                    <td><button (click)="goToEleve(eleve)" >Voir plus</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-12">
+        <div *ngIf="eleve">
+            <h3>{{eleve.firstName}} {{eleve.lastName|uppercase}}</h3>
+            <p>Né le {{eleve.birthDayAt|date: 'dd/MM/YY'}}</p>
+            <p>Date d'inscription {{eleve.registrationAt|date: 'dd/MM/YY'}}</p>
+            <hr>
+            <p>Tuteur : {{eleve.tutor}} / ({{eleve.tutorPhone}})</p>
+        </div>
+    </div>
+</div>
